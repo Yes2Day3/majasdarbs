@@ -13,7 +13,7 @@
 $students = [
     ["name"=>"John", "age"=>20, "grades" => [90,85,88]],
     ["name"=>"Jane", "age"=>22, "grades" => [92,80,84]],
-    ["name"=>"John", "age"=>20, "grades" => [78,85,90]],
+    ["name"=>"Joe", "age"=>20, "grades" => [78,85,90]],
 ];
 
 foreach($students as $student){
@@ -22,4 +22,12 @@ foreach($students as $student){
         $sum += $student["grades"][$i];
     }
     echo $student["name"] . " " . $sum / count($student["grades"]) . "\n";
+}
+
+foreach($students as $student){
+    echo "Name: {$student["name"]} Age: {$student["age"]} Grades: ";
+    for($i = 0; $i < 3; $i++){
+        echo $student["grades"][$i] . " ";
+    }
+    echo "\n";
 }
