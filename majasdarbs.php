@@ -95,3 +95,17 @@ $animals = [
         ]
     ],
 ];
+
+$colors = ["red","blue","green","yellow"];
+$result = "Color: ";
+
+for($i = 0; $i < count($colors); $i++){
+    if($i < count($colors) - 1){
+        $result = $result . $colors[$i] . ", ";
+    }
+    else{
+        $result = $result . $colors[$i];
+    }
+}
+
+echo $result;
